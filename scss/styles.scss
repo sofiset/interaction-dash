@@ -1,0 +1,78 @@
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+  
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+  
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+    
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+  
+  @if $fallback {
+    font-size: $fallback;
+  }
+  
+  font-size: $responsive;
+}
+
+$main-text: #333232;
+
+// -------------------------------
+
+body {
+	font-family: 'Patua One', Times New Roman;
+	font-color: $main-text;
+	background-color: #fbfbfb;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+header {
+	font-weight: bold;
+	background: #eeeeee;
+	height: 8%;
+	padding: 1.5%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.page-wrapper {
+	height: 100%;
+	width: 100%;
+}
+
+
+.limit-max-header {
+	@include responsive-font(4vw, 20px, 40px);
+}
+
+.chart-wrapper {
+	text-align: center;
+	width: 75%;
+	margin: 0 auto;
+}
+
+.odd-row-background {
+	background-color: #d2eafd;
+}
+
+.hover-table-row {
+	background-color: #fff68f;
+}	
+
+.date {
+	color: #999a9c;
+}
+
+#question-text {
+	background: #6cbaf9;
+}
+
+
