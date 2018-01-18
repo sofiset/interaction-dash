@@ -23,6 +23,7 @@
 }
 
 $main-text: #333232;
+$light-blue: #6cbaf9;
 
 // -------------------------------
 
@@ -69,10 +70,16 @@ header {
 
 .date {
 	color: #999a9c;
+	float: right;
+}
+
+.highlight {
+	font-color: $light-blue;
 }
 
 #question-text {
 	background: #6cbaf9;
 }
+
 
 

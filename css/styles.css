@@ -5,17 +5,17 @@ body {
   margin: 0 !important;
   padding: 0 !important; }
 
-.page-wrapper {
-  height: 100%;
-  width: 100%; }
-
-.header {
+header {
   font-weight: bold;
   background: #eeeeee;
   height: 8%;
   padding: 1.5%;
   display: flex;
   justify-content: space-between; }
+
+.page-wrapper {
+  height: 100%;
+  width: 100%; }
 
 .limit-max-header {
   font-size: 4vw; }
@@ -37,13 +37,14 @@ body {
 .hover-table-row {
   background-color: #fff68f; }
 
-#date_div {
-  color: #999a9c; }
+.date {
+  color: #999a9c;
+  float: right; }
 
-#question_text {
+.highlight {
+  font-color: #6cbaf9; }
+
+#question-text {
   background: #6cbaf9; }
-
-#user {
-  color: #ffffff; }
 
 /*# sourceMappingURL=styles.css.map */

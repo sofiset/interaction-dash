@@ -7,7 +7,7 @@
 		
 		var today = new Date();
 		var todayStr = today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate();
-		document.getElementById('date_div').innerHTML = todayStr;
+		document.getElementById('date').innerHTML = todayStr;
 
 		drawChart();
 		getQuestion();
@@ -82,7 +82,7 @@
 			}
 			
 			document.getElementById('question_text').innerHTML = questionText;
-			document.getElementById('user').innerHTML = user;
+			// document.getElementById('user').innerHTML = user;
 	}
 
   },
